@@ -6,13 +6,16 @@ public class Main {
         ll.insertFirst(32);
         ll.insertFirst(4);
 
-        ll.display();
-        System.out.println();
+//        ll.display();
+//        System.out.println();
         ll.insertLast(35);
         ll.insertLast(43);
-        ll.display();
-        System.out.println();
+//        ll.display();
+//        System.out.println();
         ll.insertAtRandom(37,3);
+        ll.display();
+
+        System.out.println(ll.deleteFirst());
         ll.display();
 
     }

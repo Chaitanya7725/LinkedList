@@ -8,11 +8,10 @@ public class LL {
         this.size = 0;
     }
 
-    public void insert(int value){
+    public void insertFirst(int value){
         Node node=new Node(value);
         node.next=head;
         head=node;
-
         if(tail==null)
             tail=head;
         size++;
@@ -22,9 +21,21 @@ public class LL {
         Node temp=head;
         while(temp!=null){
             System.out.print(temp.value+" -> ");
+            temp=temp.next;
         }
         System.out.print("END");
 
+    }
+
+    public void insertLast(int value) {
+        if(tail==null){
+            insertFirst(value);
+            return;
+        }
+        Node node=new Node(value);
+        tail.next=node;
+        tail=node;
+        size++;
     }
 
     private class Node{

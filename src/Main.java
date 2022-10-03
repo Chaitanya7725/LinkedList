@@ -1,9 +1,16 @@
 public class Main {
     public static void main(String[] args) {
         LL ll=new LL();
-        ll.insert(5);
-        ll.insert(17);
-        ll.insert(32);
-        ll.insert(4);
+        ll.insertFirst(5);
+        ll.insertFirst(17);
+        ll.insertFirst(32);
+        ll.insertFirst(4);
+
+        ll.display();
+        System.out.println();
+        ll.insertLast(35);
+        ll.insertLast(43);
+
+        ll.display();
     }
 }

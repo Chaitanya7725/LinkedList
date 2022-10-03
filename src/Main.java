@@ -10,7 +10,10 @@ public class Main {
         System.out.println();
         ll.insertLast(35);
         ll.insertLast(43);
-
         ll.display();
+        System.out.println();
+        ll.insertAtRandom(37,3);
+        ll.display();
+
     }
 }

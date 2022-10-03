@@ -38,6 +38,27 @@ public class LL {
         size++;
     }
 
+    public void insertAtRandom(int value, int index) {
+        //if index given is 0 then call insertFirst
+        //if index given is size if linkedList then call insertLast
+        if(index==0) {
+            insertFirst(value);
+            return;
+        }
+        else if(index==size) {
+            insertLast(value);
+            return;
+        }
+
+        Node temp=head;
+        for (int i = 1; i < index; i++) {
+            temp=temp.next;
+        }
+        Node node=new Node(value,temp.next);
+        temp.next=node;
+
+    }
+
     private class Node{
         private int value;
         private  Node next;

@@ -14,8 +14,13 @@ public class Main {
 //        System.out.println();
         ll.insertAtRandom(37,3);
         ll.display();
-
-        System.out.println(ll.deleteFirst());
+        System.out.println();
+        System.out.println("Deleting "+ll.deleteFirst());
+        ll.display();
+        System.out.println();
+        System.out.println("Deleting "+ll.deleteLast());
+        ll.display();
+        System.out.println("Deleting "+ll.deleteAtSpecific(3));
         ll.display();
 
     }

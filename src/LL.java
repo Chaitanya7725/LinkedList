@@ -60,14 +60,45 @@ public class LL {
     }
 
     public int deleteFirst() {
+        int val=head.value;
         head=head.next;
         if(head==null) {
             tail = null;
             size--;
         }
-        int val=head.value;
         return val;
 
+    }
+
+    public int deleteLast() {
+        if(size<1){
+            return deleteFirst();
+        }
+        Node secondLast=get(size-2);
+        int value=tail.value;
+        tail=secondLast;
+        tail.next=null;
+        size--;
+        return value;
+    }
+    public Node get(int index){
+        Node node=head;
+        for(int i=0;i<index;i++){
+            node=node.next;
+        }
+        return node;
+    }
+
+    public int deleteAtSpecific(int index) {
+        if(index==0) {
+            return deleteFirst();
+        }else if(index==size-1){
+            return deleteLast();
+        }
+        Node previous=get(index-1);
+        int value=previous.next.value;
+        previous.next=previous.next.next;
+        return value;
     }
 
     private class Node{
